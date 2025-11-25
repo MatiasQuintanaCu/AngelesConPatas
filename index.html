@@ -28,38 +28,13 @@
             }
         }
     </script>
-    <style>
-        .hero-carousel-inner {
-            transition: transform 0.6s ease-in-out;
-        }
-
-        .floating-animation {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .floating-animation-delay {
-            animation: float 3s ease-in-out infinite 1.5s;
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-    </style>
 </head>
 
 <body class="font-sans text-dark">
     <!-- Navegación -->
     <nav id="navbar"
-        class="fixed w-full px-[5%] py-5 flex justify-between items-center z-50 transition-all duration-300">
-        <div class="font-display text-2xl font-bold text-primary">Ángeles Con Patas</div>
+        class="fixed w-full px-4 sm:px-[5%] py-5 flex justify-between items-center z-50 transition-all duration-300">
+        <div class="font-display text-xl sm:text-2xl font-bold text-primary">Ángeles Con Patas</div>
         <div class="hidden md:flex gap-8">
             <a href="#inicio" class="font-medium text-dark hover:text-primary transition-colors">Inicio</a>
             <a href="#galeria" class="font-medium text-dark hover:text-primary transition-colors">Plan Padrino</a>
@@ -69,34 +44,33 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center bg-light overflow-hidden" id="inicio">
-        <div class="max-w-7xl mx-auto px-[5%] py-20 md:py-0">
-            <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <!-- Texto -->
+    <section class="min-h-screen flex items-center bg-light overflow-hidden pt-20" id="inicio">
+        <div class="max-w-7xl mx-auto px-4 sm:px-[5%] py-10 md:py-0 w-full">
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
                 <div class="text-center md:text-left order-2 md:order-1">
-                    <h1 class="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-5 text-dark">
+                    <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight mb-5 text-dark">
                         Salvando vidas, <span class="text-primary">una patita a la vez</span>
                     </h1>
-                    <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
+                    <p class="text-base md:text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
                         Somos una fundación dedicada al rescate, rehabilitación y adopción responsable de animales
                         abandonados. Cada día trabajamos para darles una segunda oportunidad.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                         <a href="#donar"
-                            class="bg-primary text-white px-9 py-4 rounded-lg font-semibold hover:bg-red-500 transition-all hover:-translate-y-1 hover:shadow-xl text-center">
+                            class="bg-primary text-white px-6 sm:px-9 py-3 sm:py-4 rounded-lg font-semibold hover:bg-red-500 transition-all hover:-translate-y-1 hover:shadow-xl text-center">
                             Hacer una donación
                         </a>
                         <a href="#contacto"
-                            class="bg-transparent text-dark border-2 border-dark px-9 py-4 rounded-lg font-semibold hover:bg-dark hover:text-white transition-all text-center">
+                            class="bg-transparent text-dark border-2 border-dark px-6 sm:px-9 py-3 sm:py-4 rounded-lg font-semibold hover:bg-dark hover:text-white transition-all text-center">
                             Conocer más
                         </a>
                     </div>
                 </div>
 
-                <!-- Carrusel -->
                 <div class="relative order-1 md:order-2">
-                    <div class="relative overflow-hidden rounded-3xl shadow-2xl h-[400px] md:h-[500px] lg:h-[600px]">
-                        <div class="hero-carousel-inner flex h-full" id="heroCarouselInner">
+                    <div
+                        class="relative overflow-hidden rounded-3xl shadow-2xl h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+                        <div class="flex h-full transition-transform duration-700 ease-in-out" id="heroCarouselInner">
                             <div class="min-w-full h-full">
                                 <img src="./Assets/IMG_1117 (1).jpg" alt="Perro rescatado"
                                     class="w-full h-full object-cover">
@@ -107,12 +81,7 @@
                             <div class="min-w-full h-full">
                                 <img src="./Assets/IMG_1117 (1).jpg" alt="Gato" class="w-full h-full object-cover">
                             </div>
-                            <div class="min-w-full h-full">
-                                <img src="./Assets/IMG_1117 (1).jpg" alt="Perro adoptado"
-                                    class="w-full h-full object-cover">
-                            </div>
                         </div>
-                        <!-- Dots -->
                         <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2.5 z-10"
                             id="heroCarouselDots"></div>
                     </div>
@@ -122,103 +91,97 @@
     </section>
 
     <!-- Stats -->
-    <section class="bg-dark text-white py-16 px-[5%]">
+    <section class="bg-dark text-white py-12 sm:py-16 px-4 sm:px-[5%]">
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10 text-center">
                 <div>
-                    <h3 class="text-5xl lg:text-6xl font-bold text-accent mb-2">15</h3>
-                    <p class="text-lg opacity-90">Años de experiencia</p>
+                    <h3 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-accent mb-2">15</h3>
+                    <p class="text-sm sm:text-lg opacity-90">Años de experiencia</p>
                 </div>
                 <div>
-                    <h3 class="text-5xl lg:text-6xl font-bold text-accent mb-2">500+</h3>
-                    <p class="text-lg opacity-90">Animales rescatados</p>
+                    <h3 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-accent mb-2">1200+</h3>
+                    <p class="text-sm sm:text-lg opacity-90">Animales rescatados</p>
                 </div>
                 <div>
-                    <h3 class="text-5xl lg:text-6xl font-bold text-accent mb-2">350+</h3>
-                    <p class="text-lg opacity-90">Adopciones exitosas</p>
+                    <h3 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-accent mb-2">700+</h3>
+                    <p class="text-sm sm:text-lg opacity-90">Adopciones exitosas</p>
                 </div>
                 <div>
-                    <h3 class="text-5xl lg:text-6xl font-bold text-accent mb-2">24/7</h3>
-                    <p class="text-lg opacity-90">Disponibilidad</p>
+                    <h3 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-accent mb-2">24/7</h3>
+                    <p class="text-sm sm:text-lg opacity-90">Disponibilidad</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Gallery -->
-    <section class="py-20 px-[5%] bg-white" id="galeria">
+    <section class="py-12 sm:py-20 px-4 sm:px-[5%] bg-white" id="galeria">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="font-display text-4xl lg:text-5xl mb-4 text-dark">Plan Padrino</h2>
-                <p class="text-lg text-gray-600">Nuestro objetivo es brindarle a cada angelito una vida digna, llena del
-                    amor que merecen. A través de nuestro Plan Padrino, puedes apadrinar a uno de nuestros rescatados
-                    con una cuota mensual que cubre su alimentación y cuidados.
-                    Cada apadrinamiento es una luz de esperanza que transforma vidas. Así como ellos nos llenan el
-                    corazón, tú puedes darles la segunda oportunidad que tanto necesitan.
-                    Conoce a nuestros angelitos esperando por un padrino:</p>
+            <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+                <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl mb-4 text-dark">Plan Padrino</h2>
+                <p class="text-base sm:text-lg text-gray-600">
+                    Nuestro objetivo es brindarle a cada angelito una vida digna, llena del amor que merecen. A través
+                    de nuestro Plan Padrino, puedes apadrinar a uno de nuestros rescatados con una cuota mensual que
+                    cubre su alimentación y cuidados.
+                </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                <div class="relative overflow-hidden rounded-2xl cursor-pointer group aspect-square" onclick="apadrinar('Luna')">
-                    <img src="./Assets/lua.jpeg" alt="luna"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div
-                        class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                        <h4 class="text-white text-xl font-semibold mb-1">Luna</h4>
-                        <p class="text-white/90 text-sm">Haz clic para apadrinar</p>
-                    </div>
-                </div>
-                <div class="relative overflow-hidden rounded-2xl cursor-pointer group aspect-square" onclick="apadrinar('Fede')">
-                    <img src="./Assets/fede.jpeg" alt="Fede"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div
-                        class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                        <h4 class="text-white text-xl font-semibold mb-1">Fede</h4>
-                        <p class="text-white/90 text-sm">Haz clic para apadrinar</p>
-                    </div>
-                </div>
-                <div class="relative overflow-hidden rounded-2xl cursor-pointer group aspect-square" onclick="apadrinar('Cebollita')">
-                    <img src="./Assets/cebollita.jpeg" alt="Cebollita"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div
-                        class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                        <h4 class="text-white text-xl font-semibold mb-1">Cebollita</h4>
-                        <p class="text-white/90 text-sm">Haz clic para apadrinar</p>
-                    </div>
-                </div>
-                <div class="relative overflow-hidden rounded-2xl cursor-pointer group aspect-square" onclick="apadrinar('Oliva')">
-                    <img src="./Assets/oliva.jpeg" alt="Oliva"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div
-                        class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                        <h4 class="text-white text-xl font-semibold mb-1">Oliva</h4>
-                        <p class="text-white/90 text-sm">Haz clic para apadrinar</p>
-                    </div>
-                </div>
-                <div class="relative overflow-hidden rounded-2xl cursor-pointer group aspect-square" onclick="apadrinar('Simon')">
-                    <img src="./Assets/simon.jpeg" alt="Simon"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div
-                        class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                        <h4 class="text-white text-xl font-semibold mb-1">Simon</h4>
-                        <p class="text-white/90 text-sm">Haz clic para apadrinar</p>
-                    </div>
-                </div>
+            <div id="galeriaAnimales" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5"></div>
+
+            <div id="botonVerMas" class="text-center mt-8 hidden">
+                <button onclick="cargarMasAnimales()"
+                    class="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-500 transition-all hover:-translate-y-1 hover:shadow-xl">
+                    Ver más angelitos 🐾
+                </button>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section class="py-20 px-[5%] bg-light" id="contacto">
+    <section class="py-12 sm:py-20 px-4 sm:px-[5%] bg-light" id="contacto">
         <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16">
-                <!-- Info -->
+            <div class="grid md:grid-cols-2 gap-10 sm:gap-16">
                 <div>
-                    <h2 class="font-display text-4xl lg:text-5xl mb-5">Hablemos</h2>
-                    <p class="text-gray-600 mb-8 leading-relaxed">¿Quieres adoptar, ser voluntario o simplemente conocer
+                    <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl mb-5">Hablemos</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">¿Quieres adoptar, ser voluntario o simplemente conocer
                         más sobre nuestro trabajo? Estamos aquí para ayudarte.</p>
 
-                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                    <!-- Horarios -->
+                    <div class="bg-white p-6 rounded-xl shadow-md mb-6">
+                        <h3 class="text-xl font-semibold text-dark mb-3 flex items-center gap-2">
+                            <span class="text-2xl">🕐</span> Horarios de Atención
+                        </h3>
+                        <p class="text-gray-700 font-medium">Martes a Domingo</p>
+                        <p class="text-gray-600">10:00 AM - 3:00 PM</p>
+                    </div>
+
+                    <!-- Ubicación -->
+                    <div class="bg-white p-6 rounded-xl shadow-md mb-6">
+                        <h3 class="text-xl font-semibold text-dark mb-3 flex items-center gap-2">
+                            <span class="text-2xl">📍</span> Ubicación
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            <strong>TURBACO</strong>, carretera principal, doblar por restaurante LOS NISPEROS, pasar 2
+                            cuadras y doblar a mano derecha.
+                        </p>
+                        <p class="text-gray-600 mt-2 text-sm">
+                            Casa de portón negro, rodeada de plantas de limoncillo.
+                        </p>
+                    </div>
+
+                    <!-- Donaciones -->
+                    <div class="bg-secondary/10 border-2 border-secondary p-6 rounded-xl mb-6">
+                        <h3 class="text-xl font-semibold text-dark mb-3">Se reciben donaciones de:</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-center gap-2">🍚 Arroz (para preparación del sopón)</li>
+                            <li class="flex items-center gap-2">🐾 Alimento para perros y gatos</li>
+                            <li class="flex items-center gap-2">🧻 Útiles de aseo</li>
+                            <li class="flex items-center gap-2">🍽️ Porcelanas</li>
+                            <li class="flex items-center gap-2">💊 Medicinas</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
                         <a href="https://wa.me/573003100473" target="_blank"
                             class="flex-1 bg-[#25D366] text-white py-4 px-6 rounded-xl text-center font-semibold hover:-translate-y-1 hover:shadow-lg transition-all">
                             WhatsApp
@@ -228,13 +191,9 @@
                             Instagram
                         </a>
                     </div>
-
-                    <p class="text-gray-600 leading-relaxed">También puedes escribirnos directamente usando el
-                        formulario. Te responderemos lo antes posible.</p>
                 </div>
 
-                <!-- Formulario -->
-                <div class="bg-white p-8 lg:p-10 rounded-3xl shadow-lg">
+                <div class="bg-white p-6 sm:p-8 lg:p-10 rounded-3xl shadow-lg">
                     <form id="contactForm">
                         <div class="mb-5">
                             <label class="block mb-2 font-medium text-dark">Nombre completo</label>
@@ -273,22 +232,22 @@
     </section>
 
     <!-- Donate -->
-    <section class="py-20 px-[5%] bg-secondary text-white text-center" id="donar">
+    <section class="py-12 sm:py-20 px-4 sm:px-[5%] bg-secondary text-white text-center" id="donar">
         <div class="max-w-7xl mx-auto">
-            <h2 class="font-display text-4xl lg:text-5xl mb-5">Tu ayuda salva vidas</h2>
-            <p class="text-lg lg:text-xl mb-12 max-w-2xl mx-auto opacity-95 leading-relaxed">
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl mb-5">Tu ayuda salva vidas</h2>
+            <p class="text-base sm:text-lg lg:text-xl mb-12 max-w-2xl mx-auto opacity-95 leading-relaxed">
                 Cada donación nos permite seguir rescatando, alimentando y cuidando a más animales. Con tu apoyo,
                 podemos hacer la diferencia.
             </p>
 
-            <div class="bg-white max-w-lg mx-auto p-10 lg:p-12 rounded-3xl shadow-2xl">
-                <h3 class="text-dark text-2xl font-semibold mb-8">Donar con PayPal</h3>
+            <div class="bg-white max-w-lg mx-auto p-8 sm:p-10 lg:p-12 rounded-3xl shadow-2xl">
+                <h3 class="text-dark text-xl sm:text-2xl font-semibold mb-8">Donar con PayPal</h3>
                 <form action="https://www.paypal.com/donate" method="post" target="_blank">
                     <input type="hidden" name="business" value="funangeles@hotmail.com">
                     <input type="hidden" name="item_name" value="Donación Ángeles Con Patas">
                     <input type="hidden" name="currency_code" value="USD">
                     <button type="submit"
-                        class="w-full bg-[#0070ba] text-white py-5 px-12 rounded-xl text-lg font-semibold hover:bg-[#005a94] transition-all hover:-translate-y-1 hover:shadow-xl">
+                        class="w-full bg-[#0070ba] text-white py-4 sm:py-5 px-8 sm:px-12 rounded-xl text-lg font-semibold hover:bg-[#005a94] transition-all hover:-translate-y-1 hover:shadow-xl">
                         Donar ahora
                     </button>
                 </form>
@@ -298,25 +257,28 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-16 px-[5%]">
+    <footer class="bg-dark text-white py-12 sm:py-16 px-4 sm:px-[5%]">
         <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-3 gap-10 mb-12">
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 mb-12">
                 <div>
-                    <h3 class="font-display text-3xl mb-4 text-accent">Ángeles Con Patas</h3>
-                    <p class="opacity-80 leading-relaxed">La Fundación Ángeles con Patas inició el 27 de Marzo de 2010 por un grupo de personas interesadas y preocupadas por el bienestar animal debido a la situación que se observa comúnmente en la ciudad de Cartagena.</p>
+                    <h3 class="font-display text-2xl sm:text-3xl mb-4 text-accent">Ángeles Con Patas</h3>
+                    <p class="opacity-80 leading-relaxed text-sm sm:text-base">La Fundación Ángeles con Patas inició el
+                        27 de Marzo de 2010 por un grupo de personas interesadas y preocupadas por el bienestar animal
+                        debido a la situación que se observa comúnmente en la ciudad de Cartagena.</p>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-4 text-accent">Enlaces</h4>
-                    <div class="space-y-3">
+                    <div class="space-y-3 text-sm sm:text-base">
                         <a href="#inicio" class="block opacity-80 hover:opacity-100 transition-opacity">Inicio</a>
-                        <a href="#galeria" class="block opacity-80 hover:opacity-100 transition-opacity">Plan Padrino</a>
+                        <a href="#galeria" class="block opacity-80 hover:opacity-100 transition-opacity">Plan
+                            Padrino</a>
                         <a href="#contacto" class="block opacity-80 hover:opacity-100 transition-opacity">Contacto</a>
                         <a href="#donar" class="block opacity-80 hover:opacity-100 transition-opacity">Donar</a>
                     </div>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-4 text-accent">Síguenos</h4>
-                    <div class="space-y-3">
+                    <div class="space-y-3 text-sm sm:text-base">
                         <a href="https://wa.me/573003100473" target="_blank"
                             class="block opacity-80 hover:opacity-100 transition-opacity">WhatsApp</a>
                         <a href="https://www.instagram.com/angelesconpatas_fundacion" target="_blank"
@@ -327,20 +289,133 @@
                 </div>
             </div>
 
-            <div class="text-center pt-8 border-t border-white/10 opacity-70">
-                <p>&copy; 2024 Ángeles Con Patas. Hecho con amor para los animales. (qynect_studio)</p>
+            <div class="text-center pt-8 border-t border-white/10 opacity-70 text-sm">
+                <p>&copy; 2025 Ángeles Con Patas. Hecho con amor para los animales. (qynect_studio)</p>
             </div>
         </div>
     </footer>
 
     <script>
+            /
+        const todosLosAnimales = [
+            {
+                nombre: 'Luna',
+                imagen: './Assets/lua.jpeg',
+                descripcion: '7 años, Cariñosa, Leal,Inteligente'
+            },
+            {
+                nombre: 'Fede',
+                imagen: './Assets/fede.jpeg',
+                descripcion: '6 años, Leal, Amable, Cariñoso'
+            },
+            {
+                nombre: 'Cebollita',
+                imagen: './Assets/cebollita.jpeg',
+                descripcion: '5 años, Tranquila, Amigable, Timida'
+            },
+            {
+                nombre: 'Oliva',
+                imagen: './Assets/oliva.jpeg',
+                descripcion: '8 años, Amorosa, Amante de fotos, Protectora'
+            },
+            {
+                nombre: 'Simon',
+                imagen: './Assets/simon.jpeg',
+                descripcion: '7 años, Fuerte, Territorial, Leal'
+            },
+
+
+
+
+
+        ];
+
+        let animalesMostrados = 0;
+        const animalesPorPagina = 6;
+        let animalesAleatorios = [];
+
+        // Mezclar array aleatoriamente
+        function mezclarArray(array) {
+            const nuevoArray = [...array];
+            for (let i = nuevoArray.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [nuevoArray[i], nuevoArray[j]] = [nuevoArray[j], nuevoArray[i]];
+            }
+            return nuevoArray;
+        }
+
+        // Crear card de animal con preloader
+        function crearCardAnimal(animal) {
+            const card = document.createElement('div');
+            card.className = 'relative overflow-hidden rounded-2xl cursor-pointer group aspect-square opacity-0 transition-opacity duration-500';
+
+            // Placeholder mientras carga
+            const placeholder = document.createElement('div');
+            placeholder.className = 'absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse';
+            card.appendChild(placeholder);
+
+            const img = document.createElement('img');
+            img.src = animal.imagen;
+            img.alt = animal.nombre;
+            img.className = 'w-full h-full object-cover transition-transform duration-500 group-hover:scale-110';
+            img.style.display = 'none';
+
+            img.onload = function () {
+                placeholder.remove();
+                img.style.display = 'block';
+                card.classList.remove('opacity-0');
+            };
+
+            const overlay = document.createElement('div');
+            overlay.className = 'absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-4 sm:p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300';
+            overlay.innerHTML = `
+                <h4 class="text-white text-lg sm:text-xl font-semibold mb-1">${animal.nombre}</h4>
+                <p class="text-white/90 text-xs sm:text-sm mb-2 line-clamp-2">${animal.descripcion}</p>
+                <p class="text-accent text-xs sm:text-sm font-semibold">Haz clic para apadrinar 💛</p>
+            `;
+
+            card.appendChild(img);
+            card.appendChild(overlay);
+            card.onclick = () => apadrinar(animal.nombre);
+
+            return card;
+        }
+
+        // Cargar animales iniciales
+        function cargarAnimalesIniciales() {
+            animalesAleatorios = mezclarArray(todosLosAnimales);
+            cargarMasAnimales();
+        }
+
+        // Cargar más animales
+        function cargarMasAnimales() {
+            const galeria = document.getElementById('galeriaAnimales');
+            const botonVerMas = document.getElementById('botonVerMas');
+
+            const siguientes = animalesAleatorios.slice(animalesMostrados, animalesMostrados + animalesPorPagina);
+
+            siguientes.forEach((animal, index) => {
+                setTimeout(() => {
+                    const card = crearCardAnimal(animal);
+                    galeria.appendChild(card);
+                }, index * 100);
+            });
+
+            animalesMostrados += siguientes.length;
+
+            if (animalesMostrados >= animalesAleatorios.length) {
+                botonVerMas.classList.add('hidden');
+            } else {
+                botonVerMas.classList.remove('hidden');
+            }
+        }
+
         // Hero Carousel
         let heroCurrentSlide = 0;
-        const heroSlides = document.querySelectorAll('.hero-carousel-inner > div');
+        const heroSlides = document.querySelectorAll('#heroCarouselInner > div');
         const heroTotalSlides = heroSlides.length;
         const heroDotsContainer = document.getElementById('heroCarouselDots');
 
-        // Crear dots
         for (let i = 0; i < heroTotalSlides; i++) {
             const dot = document.createElement('div');
             dot.className = `w-3 h-3 rounded-full border-2 border-white cursor-pointer transition-all ${i === 0 ? 'bg-white scale-110' : 'bg-white/50'}`;
@@ -358,11 +433,9 @@
             inner.style.transform = `translateX(-${heroCurrentSlide * 100}%)`;
 
             Array.from(dots).forEach((dot, index) => {
-                if (index === heroCurrentSlide) {
-                    dot.className = 'w-3 h-3 rounded-full bg-white border-2 border-white cursor-pointer transition-all scale-110';
-                } else {
-                    dot.className = 'w-3 h-3 rounded-full bg-white/50 border-2 border-white cursor-pointer transition-all';
-                }
+                dot.className = index === heroCurrentSlide
+                    ? 'w-3 h-3 rounded-full bg-white border-2 border-white cursor-pointer transition-all scale-110'
+                    : 'w-3 h-3 rounded-full bg-white/50 border-2 border-white cursor-pointer transition-all';
             });
         }
 
@@ -378,13 +451,13 @@
 
         setInterval(nextHeroSlide, 4000);
 
-        // Navbar scroll effect
+        // Navbar scroll
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
-                navbar.className = 'fixed w-full px-[5%] py-5 flex justify-between items-center z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-lg';
+                navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
             } else {
-                navbar.className = 'fixed w-full px-[5%] py-5 flex justify-between items-center z-50 transition-all duration-300';
+                navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
             }
         });
 
@@ -399,11 +472,9 @@
             });
         });
 
-        // Función para apadrinar
         function apadrinar(nombreAnimal) {
             const mensaje = encodeURIComponent(`¡Hola! 🐾\n\nEstoy interesado/a en ser padrino/madrina de ${nombreAnimal} a través del Plan Padrino de Ángeles Con Patas.\n\nMe gustaría recibir más información sobre:\n- Costo mensual del apadrinamiento\n- Beneficios del Plan Padrino\n- Proceso para formalizar el apadrinamiento\n\n¡Gracias por la labor que realizan! 💛`);
-            const numeroWhatsApp = '573003100473';
-            window.open(`https://wa.me/${numeroWhatsApp}?text=${mensaje}`, '_blank');
+            window.open(`https://wa.me/573003100473?text=${mensaje}`, '_blank');
         }
 
         function enviarEmail() {
@@ -419,7 +490,6 @@
 
             const subject = encodeURIComponent(`Contacto de ${nombre}`);
             const body = encodeURIComponent(`Nombre: ${nombre}\nEmail: ${email}\nTeléfono: ${telefono}\n\nMensaje:\n${mensaje}`);
-
             window.open(`mailto:contacto@angelesconpatas.org?subject=${subject}&body=${body}`);
         }
 
@@ -434,10 +504,11 @@
             }
 
             const texto = encodeURIComponent(`Hola, soy ${nombre}.\n\nMi teléfono: ${telefono}\n\n${mensaje}`);
-            const numeroWhatsApp = '573003100473';
-
-            window.open(`https://wa.me/${numeroWhatsApp}?text=${texto}`, '_blank');
+            window.open(`https://wa.me/573008147449?text=${texto}`, '_blank');
         }
+
+        // Inicializar galería al cargar
+        document.addEventListener('DOMContentLoaded', cargarAnimalesIniciales);
     </script>
 </body>
 
